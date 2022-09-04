@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/ship2"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/logo"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="10dp"
+            />
+
+        <TextView
+            android:layout_width="272dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="27dp"
+            android:shadowColor="#041C70"
+            android:shadowDx="4"
+            android:shadowDy="4"
+            android:shadowRadius="10"
+            android:text="@string/a1"
+            android:textAlignment="center"
+            android:textColor="@color/colorwhite"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        >
+
+        <TextView
+            android:id="@+id/hometext"
+            android:layout_width="369dp"
+            android:layout_height="123dp"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="casual"
+            android:gravity="center"
+            android:shadowColor="@color/colorblack"
+            android:shadowDx="-15"
+            android:shadowDy="4"
+            android:shadowRadius="10"
+            android:text="WELCOME"
+            android:textAlignment="center"
+            android:textColor="#FFEB3B"
+            android:textIsSelectable="false"
+            android:textSize="80sp"
+            android:textStyle="bold|italic|normal"
+            android:typeface="normal" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+        >
+
+        <Button
+            android:id="@+id/caddet_button"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_bg"
+            android:layout_margin="10dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:onClick="cadet"
+            android:text="@string/a2"
+            android:textColor="@color/colorwhite"
+            android:textSize="15sp"
+
+
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal">
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="350dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="@drawable/input_bg"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:onClick="admin"
+            android:text="@string/a3"
+            android:textColor="@color/colorwhite"
+            android:textSize="15sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="350dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="@drawable/input_bg"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="@string/a4"
+            android:textColor="@color/colorwhite"
+            android:layout_gravity="center"
+            android:textSize="15sp"
+            android:onClick="man"
+            />
+    </LinearLayout>
+
+</LinearLayout>
