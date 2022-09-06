@@ -12,16 +12,16 @@ class option : AppCompatActivity() {
     }
 
     fun maintainance_butoon(view: View) {
-        var intent = Intent(this, dataform3::class.java)
+        var intent = Intent(this, maintenance_form::class.java)
         startActivity(intent)
     }
 
     fun plumbing_button(view: View) {
-        var intent = Intent(this, dataform2::class.java)
+        var intent = Intent(this, plumbing_form::class.java)
         startActivity(intent)
     }
     fun electrician_button(view: View) {
-        var intent = Intent(this, dataform1::class.java)
+        var intent = Intent(this, electrician_form::class.java)
         startActivity(intent)
     }
 

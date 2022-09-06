@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/a2"
     android:layout_height="match_parent"
-    tools:context=".dataform3">
+    android:background="@drawable/a2"
+    tools:context=".electrician_form">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -46,10 +46,10 @@
             android:layout_centerInParent="true"
             android:background="@drawable/input_bg"
             android:backgroundTint="#FFEB3B"
-            android:drawableLeft="@drawable/maintenance"
-            android:drawableRight="@drawable/maintenance"
+            android:drawableLeft="@drawable/electrical"
+            android:drawableRight="@drawable/electrical"
             android:drawablePadding="10dp"
-            android:text="MAINTENANCE"
+            android:text="ELECTRICIAN"
             android:textColor="@color/colorblack"
             android:textSize="30sp"
             android:textStyle="bold" />
@@ -92,6 +92,7 @@
             />
 
         <EditText
+            android:id="@+id/roll_no_edit"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -134,7 +135,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Location"
+            android:text="Room_no:"
             android:textColor="@color/colorblack"
             android:textStyle="bold"
             android:textSize="22sp"
@@ -146,7 +147,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginRight="10dp"
-            android:inputType="number|text"
+            android:inputType="number"
             android:background="@drawable/input_bg"
             android:layout_gravity="center"/>
     </LinearLayout>
@@ -214,12 +215,14 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Submit"
-            android:layout_margin="20dp"/>
-
-
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Submit" />
 
 
     </RelativeLayout>
+
 
 </LinearLayout>

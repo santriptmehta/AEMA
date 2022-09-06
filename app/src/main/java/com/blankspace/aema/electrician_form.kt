@@ -3,9 +3,9 @@ package com.blankspace.aema
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class dataform3 : AppCompatActivity() {
+class electrician_form : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_dataform3)
+        setContentView(R.layout.activity_electrician_form)
     }
 }

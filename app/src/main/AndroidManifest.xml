@@ -26,13 +26,13 @@
             android:name=".option"
             android:exported="false" />
         <activity
-            android:name=".dataform3"
+            android:name=".maintenance_form"
             android:exported="false" />
         <activity
-            android:name=".dataform2"
+            android:name=".plumbing_form"
             android:exported="false" />
         <activity
-            android:name=".dataform1"
+            android:name=".electrician_form"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
