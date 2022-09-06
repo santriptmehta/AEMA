@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "463807526095",
+    "project_id": "aema-e91e6",
+    "storage_bucket": "aema-e91e6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:463807526095:android:e8a5edb2cd939211b6f3ba",
+        "android_client_info": {
+          "package_name": "com.blankspace.aema"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "463807526095-ode1kvcjtnnb5m2phvdn79s4l3jtabff.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.blankspace.aema",
+            "certificate_hash": "9881ea50306939bc146227880fc8dad409ba57cd"
+          }
+        },
+        {
+          "client_id": "463807526095-5bpgerj5an3ntr1bni55m4c7c9ab9u1f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZqNT5aFVJu4rgpMpNqnNIX_S5DN5tYh8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "463807526095-5bpgerj5an3ntr1bni55m4c7c9ab9u1f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -63,7 +63,7 @@
             android:background="@drawable/input_bg"
             android:layout_marginRight="10dp"
             android:layout_gravity="center"
-            android:onClick="m"/>
+            android:onClick="maintainance_butoon"/>
     </LinearLayout>
 
     <LinearLayout
@@ -92,7 +92,7 @@
             android:background="@drawable/input_bg"
             android:layout_marginRight="10dp"
             android:layout_gravity="center"
-            android:onClick="p"
+            android:onClick="plumbing_button"
 
             />
     </LinearLayout>
@@ -124,7 +124,7 @@
             android:background="@drawable/input_bg"
             android:layout_marginRight="10dp"
             android:layout_gravity="center"
-            android:onClick="e"
+            android:onClick="electrician_button"
             />
     </LinearLayout>
 
