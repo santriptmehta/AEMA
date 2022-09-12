@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         cadet_button = findViewById(R.id.caddet_button)
 
         cadet_button.setOnClickListener {
-            var intent = Intent(this,stdlogin::class.java)
+            var intent = Intent(this,cadet_login::class.java)
             startActivity(intent)
         }
 

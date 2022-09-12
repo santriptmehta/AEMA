@@ -81,10 +81,11 @@
         android:orientation="horizontal">
 
         <TextView
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Roll_no:"
+            android:text="Roll No:"
             android:textColor="@color/colorblack"
             android:textStyle="bold"
             android:textSize="22sp"
@@ -92,10 +93,12 @@
             />
 
         <EditText
+            android:id="@+id/cadet_roll_no"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginRight="10dp"
+            android:textColor="@color/black"
             android:inputType="number"
             android:background="@drawable/input_bg"
             android:layout_gravity="center"/>

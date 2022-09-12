@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:background="@drawable/a2"
     android:layout_height="match_parent"
-    tools:context=".stdlogin">
+    tools:context=".cadet_login">
 
     <TextView
         android:id="@+id/head"
@@ -15,7 +15,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="21dp"
-        android:layout_marginEnd="27dp"
+        android:layout_marginEnd="59dp"
         android:text="@string/a1"
         android:textAlignment="center"
         android:textColor="@color/colorwhite"
@@ -139,6 +139,7 @@
         android:layout_marginTop="27dp"
         android:layout_marginEnd="118dp"
         android:text="Register"
+        android:onClick="register_switch"
         android:textColor="@color/colorred" />
 
     <Button

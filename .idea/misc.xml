@@ -3,13 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/OpenSource/AEMA/app/src/main/res/layout/activity_cadet_login.xml" value="0.36666666666666664" />
         <entry key="..\:/OpenSource/AEMA/app/src/main/res/layout/activity_dataform1.xml" value="0.36666666666666664" />
         <entry key="..\:/OpenSource/AEMA/app/src/main/res/layout/activity_dataform2.xml" value="0.36666666666666664" />
         <entry key="..\:/OpenSource/AEMA/app/src/main/res/layout/activity_dataform3.xml" value="0.36666666666666664" />
+        <entry key="..\:/OpenSource/AEMA/app/src/main/res/layout/activity_home_page.xml" value="0.18" />
         <entry key="..\:/OpenSource/AEMA/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/OpenSource/AEMA/app/src/main/res/layout/activity_maintenance_form.xml" value="0.36666666666666664" />
         <entry key="..\:/OpenSource/AEMA/app/src/main/res/layout/activity_option.xml" value="0.25" />
+        <entry key="..\:/OpenSource/AEMA/app/src/main/res/layout/activity_plumbing_form.xml" value="0.36666666666666664" />
+        <entry key="..\:/OpenSource/AEMA/app/src/main/res/layout/activity_register_form.xml" value="0.33" />
         <entry key="..\:/OpenSource/AEMA/app/src/main/res/layout/activity_stdlogin.xml" value="0.22" />
-        <entry key="..\:/OpenSource/AEMA/app/src/main/res/layout/activity_sulogin.xml" value="0.20153985507246377" />
+        <entry key="..\:/OpenSource/AEMA/app/src/main/res/layout/activity_sulogin.xml" value="0.33" />
         <entry key="..\:/OpenSource/AEMA/app/src/main/res/layout/activity_teamlogin.xml" value="0.20153985507246377" />
         <entry key="..\:/Users/santr/OneDrive/Desktop/CrossNote/AEMA/app/src/main/res/drawable-v24/maintenance.xml" value="0.1" />
         <entry key="..\:/Users/santr/OneDrive/Desktop/CrossNote/AEMA/app/src/main/res/layout/activity_dataform1.xml" value="0.25" />
