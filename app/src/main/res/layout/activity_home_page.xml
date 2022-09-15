@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/ship"
     android:orientation="vertical"
-    tools:context=".option">
+    tools:context=".home_page">
 
     <RelativeLayout
         android:layout_width="match_parent"

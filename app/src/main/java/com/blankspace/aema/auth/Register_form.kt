@@ -1,4 +1,4 @@
-package com.blankspace.aema
+package com.blankspace.aema.auth
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -11,6 +11,7 @@ import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.Toast
 import com.blankspace.aema.Models.User
+import com.blankspace.aema.R
 import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore

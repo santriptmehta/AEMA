@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:background="@drawable/a2"
     android:layout_height="match_parent"
-    tools:context=".cadet_login">
+    tools:context=".auth.cadet_login">
 
     <TextView
         android:id="@+id/head"
