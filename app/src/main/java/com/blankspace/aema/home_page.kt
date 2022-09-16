@@ -27,4 +27,14 @@ class home_page : AppCompatActivity() {
         startActivity(intent)
         finish()
     }
+
+    fun plumbing_button(view: View) {
+        var intent = Intent(this, plumbing_form::class.java)
+        startActivity(intent)
+    }
+
+    fun electrician_button(view: View) {
+        var intent = Intent(this, electrician_form::class.java)
+        startActivity(intent)
+    }
 }
