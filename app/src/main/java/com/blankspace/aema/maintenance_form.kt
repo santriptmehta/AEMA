@@ -6,7 +6,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.blankspace.aema.Models.Maintainance
-import com.blankspace.aema.Models.User
+import com.google.android.material.textfield.TextInputLayout
 import com.blankspace.aema.utils.UserUtils
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -36,6 +36,8 @@ class maintenance_form : AppCompatActivity() {
             val locationText = location.text.toString()
             val defectHeadingText = defectHeading.text.toString()
             val descriptionText = description.text.toString()
+
+
 
             val collectionRef =  FirebaseFirestore.getInstance().collection("Maintainance")
 

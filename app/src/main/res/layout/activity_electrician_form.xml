@@ -92,7 +92,7 @@
             />
 
         <EditText
-            android:id="@+id/roll_no_edit"
+            android:id="@+id/roll_no_elc"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -118,6 +118,7 @@
             />
 
         <EditText
+            android:id="@+id/hostel_no_elc"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -135,7 +136,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Room_no:"
+            android:text="Location"
             android:textColor="@color/colorblack"
             android:textStyle="bold"
             android:textSize="22sp"
@@ -143,6 +144,7 @@
             />
 
         <EditText
+            android:id="@+id/location_elc"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -168,6 +170,7 @@
             />
 
         <EditText
+            android:id="@+id/defect_elc"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -193,6 +196,7 @@
             />
 
         <EditText
+            android:id="@+id/description_elc"
             android:layout_width="0dp"
             android:layout_height="130dp"
             android:layout_gravity="center"
@@ -213,6 +217,7 @@
 
 
         <Button
+            android:id="@+id/ele_submit_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"

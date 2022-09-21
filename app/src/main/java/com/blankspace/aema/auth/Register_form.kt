@@ -9,7 +9,9 @@ import android.util.Patterns
 import android.view.View
 import android.widget.Button
 import android.widget.ProgressBar
+import android.widget.TextView
 import android.widget.Toast
+import com.blankspace.aema.MainActivity
 import com.blankspace.aema.Models.User
 import com.blankspace.aema.R
 import com.google.android.material.textfield.TextInputLayout
@@ -29,6 +31,7 @@ class register_form : AppCompatActivity() {
         val confirmPasswordText: TextInputLayout = findViewById(R.id.confirm_password_text)
         val registerButton: Button = findViewById(R.id.register_button)
         val registerProgress: ProgressBar = findViewById(R.id.register_progress)
+        val loginPage : TextView = findViewById(R.id.go_to_login)
 
 
 
@@ -42,7 +45,6 @@ class register_form : AppCompatActivity() {
             nameText.error = null
             passwordText.error = null
             confirmPasswordText.error = null
-
 
             if (TextUtils.isEmpty(password)) {
                 passwordText.error = "Password is required"
@@ -75,8 +77,8 @@ class register_form : AppCompatActivity() {
                             .addOnCompleteListener { task2 ->
                                 registerProgress.visibility = View.GONE
                                 if (task2.isSuccessful) {
-                                    val intent = Intent(this, cadet_login::class.java)
-                                    startActivity(intent)
+                                    Toast.makeText(this,"Successfully Account Created.", Toast.LENGTH_LONG).show()
+
                                 } else {
                                      Toast.makeText(this,"Something went wrong. Please try again.", Toast.LENGTH_LONG).show()
                                     Log.d(TAG, task.exception.toString())
@@ -89,7 +91,11 @@ class register_form : AppCompatActivity() {
                     }
                 }
 
+        }
 
+        loginPage.setOnClickListener {
+            var intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
     }
 
