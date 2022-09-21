@@ -33,13 +33,13 @@
             android:name=".option"
             android:exported="false" />
         <activity
-            android:name=".maintenance_form"
+            android:name=".form.maintenance_form"
             android:exported="false" />
         <activity
-            android:name=".plumbing_form"
+            android:name=".form.plumbing_form"
             android:exported="false" />
         <activity
-            android:name=".electrician_form"
+            android:name=".form.electrician_form"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     android:background="@drawable/a2"
-    tools:context=".electrician_form">
+    tools:context=".form.electrician_form">
 
     <RelativeLayout
         android:layout_width="match_parent"

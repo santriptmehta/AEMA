@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:background="@drawable/a2"
     android:layout_height="match_parent"
-    tools:context=".maintenance_form">
+    tools:context=".form.maintenance_form">
 
     <RelativeLayout
         android:layout_width="match_parent"

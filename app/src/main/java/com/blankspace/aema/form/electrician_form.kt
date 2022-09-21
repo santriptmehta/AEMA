@@ -1,4 +1,4 @@
-package com.blankspace.aema
+package com.blankspace.aema.form
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,7 +6,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.blankspace.aema.Models.Electrical
-import com.blankspace.aema.Models.User
+import com.blankspace.aema.R
 import com.blankspace.aema.utils.UserUtils
 import com.google.firebase.firestore.FirebaseFirestore
 

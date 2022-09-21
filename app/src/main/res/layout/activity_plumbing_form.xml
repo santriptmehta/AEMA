@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/a2"
-    tools:context=".plumbing_form">
+    tools:context=".form.plumbing_form">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
