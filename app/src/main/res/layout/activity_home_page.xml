@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ship"
+    android:background="@drawable/background_gradiant"
     android:orientation="vertical"
     tools:context=".home_page">
 
@@ -49,14 +49,26 @@
 
     </TextView>
 
+    <TextView
+        android:id="@+id/view_all_complaint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View All Complaint"
+        android:textSize="28dp"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:onClick="view_complaint"
+        android:layout_marginTop="250dp">
+    </TextView>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="290dp">
+        >
 
-        <ImageButton
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -85,7 +97,7 @@
         android:layout_marginTop="10dp">
 
 
-        <ImageButton
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -117,7 +129,7 @@
         android:layout_marginTop="10dp">
 
 
-        <ImageButton
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -146,6 +158,7 @@
         android:textColor="@color/white"
         android:textSize="28sp"
         android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         android:onClick="logOut">
     </TextView>
 
