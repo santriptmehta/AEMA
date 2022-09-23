@@ -34,6 +34,7 @@ class cadet_login : AppCompatActivity() {
         if(auth.currentUser != null){
             var intent = Intent(this, home_page::class.java)
             startActivity(intent)
+            finish()
         }else{
             cadet_login_button.setOnClickListener {
                 val email = cadet_login_username.text.toString()
@@ -63,6 +64,7 @@ class cadet_login : AppCompatActivity() {
                             var intent = Intent(this, home_page::class.java)
                             startActivity(intent)
 
+
                             Toast.makeText(this,"successfull",Toast.LENGTH_LONG).show()
                         }else {
                             Toast.makeText(this, "Something went wrong. Please try again.", Toast.LENGTH_LONG).show()
@@ -77,6 +79,7 @@ class cadet_login : AppCompatActivity() {
     fun register_switch(view: View) {
         var intent = Intent(this, register_form::class.java)
         startActivity(intent)
+        finish()
     }
 
 //    override fun onStart() {
