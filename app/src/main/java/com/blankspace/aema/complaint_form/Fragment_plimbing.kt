@@ -5,23 +5,23 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.blankspace.aema.Models.Electrical
+import com.blankspace.aema.Models.Plumbing
 import com.blankspace.aema.R
+import com.blankspace.aema.adapters.electrical_adapter
+import com.blankspace.aema.adapters.maintainance_adapter
+import com.blankspace.aema.adapters.plumbing_adapter
+import com.google.firebase.firestore.FirebaseFirestore
 
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
 class Fragment_plimbing : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    lateinit var recyclerView: RecyclerView
+    lateinit var userList: ArrayList<Plumbing>
+    private lateinit var myAdapter: maintainance_adapter
+    private lateinit var db: FirebaseFirestore
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,23 +31,28 @@ class Fragment_plimbing : Fragment() {
         return inflater.inflate(R.layout.fragment_plimbing, container, false)
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment Fragment_plimbing.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            Fragment_plimbing().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val layoutManager = LinearLayoutManager(context)
+        recyclerView = view.findViewById(R.id.recycler_view_plumbing)
+        recyclerView.layoutManager = layoutManager
+        userList = arrayListOf()
+        db = FirebaseFirestore.getInstance()
+        db.collection("Plumbing").get()
+            .addOnSuccessListener {
+                if(!it.isEmpty){
+                    for(data in it.documents){
+                        val userElc :  Plumbing? = data.toObject(Plumbing::class.java)
+                        if(userElc!=null){
+                            userList.add(userElc)
+                        }
+                    }
+                    recyclerView.adapter = plumbing_adapter(userList)
                 }
+            }
+            .addOnFailureListener{
+                Toast.makeText(activity,it.toString(), Toast.LENGTH_LONG).show()
             }
     }
 }
