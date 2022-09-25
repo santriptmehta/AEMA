@@ -1,8 +1,10 @@
 package com.blankspace.aema
 
+import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.TextView
 import com.blankspace.aema.complaint_form.complaint_view
@@ -12,24 +14,40 @@ import com.blankspace.aema.form.plumbing_form
 import com.blankspace.aema.utils.UserUtils
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.auth.User
 import com.google.firebase.ktx.Firebase
 
 class home_page : AppCompatActivity() {
-    private lateinit var auth : FirebaseAuth
-    private var mFirebaseDatabaseInstance:FirebaseFirestore?=null
-    private var userId:String?=null
+     lateinit var fauth : FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_page)
 
         val user_name_text : TextView = findViewById(R.id.user_text)
-        val name = UserUtils.user?.email.toString()
-
-        mFirebaseDatabaseInstance= FirebaseFirestore.getInstance()
-        user_name_text.text = name
-        println(name)
+        user_name_text.text = "Hello Unknown"
+        val db = FirebaseFirestore.getInstance()
+        fauth = FirebaseAuth.getInstance()
+        val userId = fauth.currentUser?.uid
+        val userRef = db.collection("Users")
+        if (userId != null) {
+            userRef.document(userId).get().addOnCompleteListener { task ->
+                if(task.isSuccessful){
+                    val document = task.result
+                    if(document.exists()){
+                        user_name_text.text = "Hello ${document.getString("name")}"
+                        Log.d(TAG,"${document.getString("name")}")
+                    }else{
+                        Log.d(TAG, "This does not exit")
+                    }
+                }else{
+                    task.exception?.message?.let {
+                        Log.d(TAG,it)
+                    }
+                }
+            }
+        }
     }
     fun maintainance_butoon(view: View) {
         val intent = Intent(this, maintenance_form::class.java)
@@ -44,7 +62,7 @@ class home_page : AppCompatActivity() {
         startActivity(intent)
     }
     fun logOut(view: View) {
-        auth = Firebase.auth
+        fauth = Firebase.auth
         Firebase.auth.signOut()
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)

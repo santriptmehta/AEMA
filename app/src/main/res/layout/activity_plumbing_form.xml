@@ -15,6 +15,7 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:src="@drawable/logo"
+            android:textColor="@color/black"
             android:layout_alignParentLeft="true"
             android:layout_margin="10dp"
             />
@@ -25,6 +26,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="27dp"
+
             android:text="@string/a1"
             android:textAlignment="center"
             android:textColor="@color/colorwhite"
@@ -44,14 +46,13 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:background="@drawable/input_bg"
-            android:backgroundTint="#FFEB3B"
             android:drawableLeft="@drawable/plumbing"
             android:drawableRight="@drawable/plumbing"
             android:drawablePadding="10dp"
             android:text="PLUMBING"
             android:textColor="@color/colorblack"
             android:textSize="30sp"
-            android:textStyle="bold" />
+            android:textFontWeight="100" />
 
 
     </RelativeLayout>
@@ -86,20 +87,22 @@
             android:layout_margin="10dp"
             android:text="Roll_no:"
             android:textColor="@color/colorblack"
-            android:textStyle="bold"
+
             android:textSize="22sp"
             android:gravity="center"
             />
 
         <EditText
             android:id="@+id/plumbingRoll"
-            android:layout_width="0dp"
+            android:layout_width="241dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_gravity="center"
             android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/top_grad"
+            android:drawablePadding="14dp"
             android:inputType="number"
-            android:background="@drawable/input_bg"
-            android:layout_gravity="center"/>
+            android:textColor="@color/black" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -110,21 +113,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Hostel_no:"
+            android:text="Hostel No:"
             android:textColor="@color/colorblack"
-            android:textStyle="bold"
+
             android:textSize="22sp"
             android:gravity="center"
             />
 
         <EditText
             android:id="@+id/plumbingHostelNo"
+            android:textColor="@color/black"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginRight="10dp"
             android:inputType="number"
-            android:background="@drawable/input_bg"
+            android:backgroundTint="@color/top_grad"
+            android:drawablePadding="14dp"
             android:layout_gravity="center"/>
     </LinearLayout>
     <LinearLayout
@@ -138,7 +143,7 @@
             android:layout_margin="10dp"
             android:text="Location"
             android:textColor="@color/colorblack"
-            android:textStyle="bold"
+
             android:textSize="22sp"
             android:gravity="center"
             />
@@ -148,9 +153,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textColor="@color/black"
             android:layout_marginRight="10dp"
             android:inputType="text"
-            android:background="@drawable/input_bg"
+            android:backgroundTint="@color/top_grad"
+            android:drawablePadding="14dp"
             android:layout_gravity="center"/>
     </LinearLayout>
     <LinearLayout
@@ -164,7 +171,6 @@
             android:layout_margin="10dp"
             android:text="Defect:"
             android:textColor="@color/colorblack"
-            android:textStyle="bold"
             android:textSize="22sp"
             android:gravity="center"
             />
@@ -175,8 +181,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginRight="10dp"
+            android:textColor="@color/black"
             android:inputType="text"
-            android:background="@drawable/input_bg"
+            android:backgroundTint="@color/top_grad"
+            android:drawablePadding="14dp"
             android:layout_gravity="center"/>
     </LinearLayout>
     <LinearLayout
@@ -190,7 +198,6 @@
             android:layout_margin="10dp"
             android:text="Description:"
             android:textColor="@color/colorblack"
-            android:textStyle="bold"
             android:textSize="22sp"
             android:gravity="center"
             />
@@ -203,6 +210,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
             android:layout_weight="1"
             android:background="@drawable/input2_bg"
             android:hint="Optional"

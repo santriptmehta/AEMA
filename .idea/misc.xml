@@ -11,7 +11,7 @@
         <entry key="..\:/OpenSource/AEMA/app/src/main/res/layout/activity_dataform1.xml" value="0.36666666666666664" />
         <entry key="..\:/OpenSource/AEMA/app/src/main/res/layout/activity_dataform2.xml" value="0.36666666666666664" />
         <entry key="..\:/OpenSource/AEMA/app/src/main/res/layout/activity_dataform3.xml" value="0.36666666666666664" />
-        <entry key="..\:/OpenSource/AEMA/app/src/main/res/layout/activity_electrician_form.xml" value="0.1" />
+        <entry key="..\:/OpenSource/AEMA/app/src/main/res/layout/activity_electrician_form.xml" value="0.22" />
         <entry key="..\:/OpenSource/AEMA/app/src/main/res/layout/activity_home_page.xml" value="0.22" />
         <entry key="..\:/OpenSource/AEMA/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/OpenSource/AEMA/app/src/main/res/layout/activity_maintenance_form.xml" value="0.25757575757575757" />
@@ -22,8 +22,9 @@
         <entry key="..\:/OpenSource/AEMA/app/src/main/res/layout/activity_sulogin.xml" value="0.33" />
         <entry key="..\:/OpenSource/AEMA/app/src/main/res/layout/activity_teamlogin.xml" value="0.20153985507246377" />
         <entry key="..\:/OpenSource/AEMA/app/src/main/res/layout/fragment_electrical.xml" value="0.2033514492753623" />
-        <entry key="..\:/OpenSource/AEMA/app/src/main/res/layout/fragment_maintainance.xml" value="0.2033514492753623" />
+        <entry key="..\:/OpenSource/AEMA/app/src/main/res/layout/fragment_maintainance.xml" value="0.22" />
         <entry key="..\:/OpenSource/AEMA/app/src/main/res/layout/fragment_plimbing.xml" value="0.2033514492753623" />
+        <entry key="..\:/OpenSource/AEMA/app/src/main/res/layout/item_maintainance.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/santr/OneDrive/Desktop/CrossNote/AEMA/app/src/main/res/drawable-v24/maintenance.xml" value="0.1" />
         <entry key="..\:/Users/santr/OneDrive/Desktop/CrossNote/AEMA/app/src/main/res/layout/activity_dataform1.xml" value="0.25" />
         <entry key="..\:/Users/santr/OneDrive/Desktop/CrossNote/AEMA/app/src/main/res/layout/activity_dataform2.xml" value="0.17806484295845998" />
