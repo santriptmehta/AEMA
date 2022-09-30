@@ -8,6 +8,17 @@
     android:layout_height="match_parent"
     tools:context=".auth.cadet_login">
 
+    <ProgressBar
+        android:id="@+id/progress_bar_login"
+        android:visibility="gone"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        />
+
     <TextView
         android:id="@+id/head"
         android:layout_width="272dp"
@@ -109,14 +120,15 @@
         android:visibility="visible"
         tools:visibility="visible" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/cadet_loginbt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/cadet_passward"
         android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
         android:layout_marginTop="48dp"
-        android:background="@drawable/input_bg"
+        android:background="@drawable/custome_button"
         android:text="LOGIN" />
 
     <TextView
@@ -143,10 +155,12 @@
         android:onClick="register_switch"
         android:textColor="@color/colorred" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/swh"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/custome_button"
+        android:textColor="@color/white"
         android:layout_below="@+id/cadet_loginbt"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="67dp"

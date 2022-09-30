@@ -8,7 +8,9 @@ import android.util.Patterns
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ProgressBar
 import android.widget.Toast
+import androidx.core.view.isVisible
 import com.blankspace.aema.R
 import com.blankspace.aema.home_page
 import com.google.firebase.auth.FirebaseAuth
@@ -20,6 +22,7 @@ class cadet_login : AppCompatActivity() {
     lateinit var cadet_passward : EditText
     lateinit var cadet_login_button : Button
     private lateinit var auth : FirebaseAuth
+    lateinit var progressBar: ProgressBar
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,6 +33,7 @@ class cadet_login : AppCompatActivity() {
         cadet_passward = findViewById(R.id.cadet_passward)
         cadet_login_button = findViewById(R.id.cadet_loginbt)
         auth = Firebase.auth
+        progressBar = findViewById(R.id.progress_bar_login)
 
         if(auth.currentUser != null){
             var intent = Intent(this, home_page::class.java)
@@ -37,6 +41,7 @@ class cadet_login : AppCompatActivity() {
             finish()
         }else{
             cadet_login_button.setOnClickListener {
+
                 val email = cadet_login_username.text.toString()
                 val password = cadet_passward.text.toString()
 
@@ -61,6 +66,7 @@ class cadet_login : AppCompatActivity() {
                     .addOnCompleteListener{task ->
 
                         if(task.isSuccessful){
+
                             var intent = Intent(this, home_page::class.java)
                             startActivity(intent)
 

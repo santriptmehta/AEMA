@@ -196,11 +196,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:gravity="center"
             android:text="Description:"
             android:textColor="@color/colorblack"
-            android:textSize="22sp"
-            android:gravity="center"
-            />
+            android:textSize="22sp" />
 
         <EditText
             android:id="@+id/plumbingDescription"
