@@ -16,6 +16,9 @@
         android:theme="@style/Theme.AEMA"
         tools:targetApi="31">
         <activity
+            android:name=".descriptive_issue"
+            android:exported="false" />
+        <activity
             android:name=".complaint_form.complaint_view"
             android:exported="false" />
         <activity
