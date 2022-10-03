@@ -3,6 +3,7 @@ package com.blankspace.aema.form
 import android.content.ContentValues
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
@@ -62,6 +63,29 @@ class maintenance_form : AppCompatActivity() {
             val defectHeadingText = defectHeading.text.toString()
             val descriptionText = description.text.toString()
             val user_name = username.toString()
+
+            rollNo.error = null
+            hostelNo.error = null
+            location.error = null
+            defectHeading.error = null
+            description.error = null
+
+            if(TextUtils.isEmpty(rollNoText)){
+                rollNo.error = "Required"
+                return@setOnClickListener
+            }
+            if(TextUtils.isEmpty(hostelNoText)){
+                hostelNo.error = "Require"
+                return@setOnClickListener
+            }
+            if(TextUtils.isEmpty(locationText)){
+                location.error = "Required"
+                return@setOnClickListener
+            }
+            if(TextUtils.isEmpty(defectHeadingText)){
+                defectHeading.error = "Required"
+                return@setOnClickListener
+            }
 
 
             val collectionRef =  FirebaseFirestore.getInstance().collection("Maintainance")

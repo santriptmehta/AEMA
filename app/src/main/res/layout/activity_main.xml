@@ -101,7 +101,7 @@
             android:layout_margin="10dp"
             android:background="@drawable/input_bg"
             android:fontFamily="sans-serif-condensed-medium"
-            android:onClick="admin"
+            android:onClick="admin_login"
             android:text="@string/a3"
             android:textColor="@color/colorwhite"
             android:textSize="15sp"

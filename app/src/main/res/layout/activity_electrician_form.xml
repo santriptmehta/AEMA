@@ -98,9 +98,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginRight="10dp"
-            android:inputType="number"
+            android:inputType="text"
             android:textColor="@color/black"
-            android:background="@drawable/input_bg"
+            android:backgroundTint="@color/top_grad"
             android:layout_gravity="center"/>
     </LinearLayout>
     <LinearLayout
@@ -126,8 +126,8 @@
             android:textColor="@color/black"
             android:layout_weight="1"
             android:layout_marginRight="10dp"
-            android:inputType="number"
-            android:background="@drawable/input_bg"
+            android:inputType="text"
+            android:backgroundTint="@color/top_grad"
             android:layout_gravity="center"/>
     </LinearLayout>
     <LinearLayout
@@ -153,8 +153,8 @@
             android:layout_weight="1"
             android:layout_marginRight="10dp"
             android:textColor="@color/black"
-            android:inputType="number"
-            android:background="@drawable/input_bg"
+            android:inputType="text"
+            android:backgroundTint="@color/top_grad"
             android:layout_gravity="center"/>
     </LinearLayout>
     <LinearLayout
@@ -181,7 +181,7 @@
             android:layout_marginRight="10dp"
             android:textColor="@color/black"
             android:inputType="text"
-            android:background="@drawable/input_bg"
+            android:backgroundTint="@color/top_grad"
             android:layout_gravity="center"/>
     </LinearLayout>
     <LinearLayout
@@ -222,13 +222,14 @@
         >
 
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/ele_submit_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
+            android:background="@drawable/custome_button"
             android:layout_marginBottom="20dp"
             android:text="Submit" />
 

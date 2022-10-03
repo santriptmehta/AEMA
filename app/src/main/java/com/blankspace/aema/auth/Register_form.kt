@@ -46,6 +46,10 @@ class register_form : AppCompatActivity() {
             passwordText.error = null
             confirmPasswordText.error = null
 
+            if(TextUtils.isEmpty(name)){
+                nameText.error = "Name is required"
+                return@setOnClickListener
+            }
             if (TextUtils.isEmpty(password)) {
                 passwordText.error = "Password is required"
                 return@setOnClickListener

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradiant"
+    tools:context=".descriptive_issue">
+
+    <TextView
+        android:id="@+id/issue_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Issue Title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        />
+
+    <TextView
+        android:id="@+id/issue_hotelno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hotstel No."
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/issue_title"
+        android:layout_marginTop="20dp"/>
+    <TextView
+        android:id="@+id/issue_locationNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Location"
+        android:textSize="26sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/issue_hotelno"/>
+    <TextView
+        android:id="@+id/issue_rollNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Roll No"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:layout_marginTop="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/issue_locationNo"/>
+    <TextView
+        android:id="@+id/issue_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@+id/issue_rollNo"
+        android:layout_marginTop="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
