@@ -2,6 +2,7 @@ package com.blankspace.aema.form
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -28,6 +29,29 @@ class plumbing_form : AppCompatActivity() {
             val location = plumLocation.text.toString()
             val defect = plumDefect.text.toString()
             val discription = plumDiscriptiom.text.toString()
+
+            plumRoll.error = null
+            plumHostelNo.error = null
+            plumLocation.error = null
+            plumDefect.error = null
+            plumDiscriptiom.error = null
+
+            if(TextUtils.isEmpty(rollText)){
+                plumRoll.error = "Required"
+                return@setOnClickListener
+            }
+            if(TextUtils.isEmpty(hostelNo)){
+                plumHostelNo.error = "Require"
+                return@setOnClickListener
+            }
+            if(TextUtils.isEmpty(location)){
+                plumLocation.error = "Required"
+                return@setOnClickListener
+            }
+            if(TextUtils.isEmpty(defect)){
+                plumDefect.error = "Required"
+                return@setOnClickListener
+            }
 
             val collectionRef = FirebaseFirestore.getInstance().collection("Plumbing")
 

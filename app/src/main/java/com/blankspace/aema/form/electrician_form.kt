@@ -2,6 +2,7 @@ package com.blankspace.aema.form
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -28,6 +29,29 @@ class electrician_form : AppCompatActivity() {
             val locationNo = location_elc.text.toString()
             val defect = defect_elc.text.toString()
             val description = description_elc.text.toString()
+
+            roll_elc.error = null
+            hostel_elc.error = null
+            location_elc.error = null
+            defect_elc.error = null
+            description_elc.error = null
+
+            if(TextUtils.isEmpty(roll)){
+                roll_elc.error = "Required"
+                return@setOnClickListener
+            }
+            if(TextUtils.isEmpty(hostelno)){
+                hostel_elc.error = "Require"
+                return@setOnClickListener
+            }
+            if(TextUtils.isEmpty(locationNo)){
+                location_elc.error = "Required"
+                return@setOnClickListener
+            }
+            if(TextUtils.isEmpty(defect)){
+                defect_elc.error = "Required"
+                return@setOnClickListener
+            }
 
             val collectionRef = FirebaseFirestore.getInstance().collection("Electrical")
 
