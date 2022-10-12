@@ -1,6 +1,7 @@
 package com.blankspace.aema.form
 
 import android.content.ContentValues
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
@@ -8,11 +9,17 @@ import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import com.blankspace.aema.Models.Maintainance
 import com.blankspace.aema.R
 import com.blankspace.aema.utils.UserUtils
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.ktx.Firebase
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+import java.time.format.FormatStyle
 
 class maintenance_form : AppCompatActivity() {
     lateinit var rollNo : EditText
@@ -23,6 +30,8 @@ class maintenance_form : AppCompatActivity() {
     lateinit var submit_button : Button
     lateinit var fauth : FirebaseAuth
     lateinit var username : String
+    lateinit var userEmail : String
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_maintenance_form)
@@ -45,6 +54,7 @@ class maintenance_form : AppCompatActivity() {
                     val document = task.result
                     if(document.exists()){
                         username = document.getString("name").toString()
+                        userEmail = document.getString("email").toString()
                         Log.d(ContentValues.TAG,"${document.getString("name")}")
                     }else{
                         Log.d(ContentValues.TAG, "This does not exit")
@@ -56,13 +66,17 @@ class maintenance_form : AppCompatActivity() {
                 }
             }
         }
+
+        val current = LocalDateTime.now()
+        val formatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM)
+        val currTimeDate = current.format(formatter)
         submit_button.setOnClickListener {
             val rollNoText = rollNo.text.toString()
             val hostelNoText = hostelNo.text.toString()
             val locationText = location.text.toString()
             val defectHeadingText = defectHeading.text.toString()
             val descriptionText = description.text.toString()
-            val user_name = username.toString()
+            val rand_id = "${userEmail}${System.currentTimeMillis()}"
 
             rollNo.error = null
             hostelNo.error = null
@@ -88,13 +102,13 @@ class maintenance_form : AppCompatActivity() {
             }
 
 
-            val collectionRef =  FirebaseFirestore.getInstance().collection("Maintainance")
+            val collectionRef =  FirebaseFirestore.getInstance().collection("Maintainance").document("${rand_id}")
 
             val auth = FirebaseAuth.getInstance()
-            val user = Maintainance( name = user_name,email = UserUtils.user?.email.toString(),
+            val user = Maintainance( name = username,email = userEmail,id = rand_id, dateTime = currTimeDate,
                                      roll_no = rollNoText, hostel_no = hostelNoText, location = locationText, defect = defectHeadingText, description = descriptionText)
 
-            collectionRef.add(user).addOnCompleteListener{
+            collectionRef.set(user).addOnCompleteListener{
                 if(it.isSuccessful){
                     Toast.makeText(this, "Maintainance updated.", Toast.LENGTH_LONG).show()
                     UserUtils.getCurrentUser()

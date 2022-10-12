@@ -6,5 +6,6 @@ data class Maintainance(val id: String = "",
                         val roll_no: String = "",
                         val hostel_no : String = "",
                          val location : String = "",
+                        val dateTime :  String = "",
                         val defect : String = "",
                          val description : String = "")

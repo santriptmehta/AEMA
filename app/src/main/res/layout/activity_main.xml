@@ -79,13 +79,9 @@
             android:background="@drawable/input_bg"
             android:layout_margin="10dp"
             android:fontFamily="sans-serif-condensed-medium"
-            android:onClick="cadet"
             android:text="@string/a2"
             android:textColor="@color/colorwhite"
             android:textSize="15sp"
-
-
-
             />
     </LinearLayout>
 
@@ -94,21 +90,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="center_horizontal">
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="350dp"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:background="@drawable/input_bg"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:onClick="admin_login"
-            android:text="@string/a3"
-            android:textColor="@color/colorwhite"
-            android:textSize="15sp"
-            android:layout_gravity="center"
-            android:gravity="center"
 
-            />
 
     </LinearLayout>
 
@@ -118,19 +100,15 @@
         android:orientation="horizontal"
         android:layout_gravity="center_horizontal">
 
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="350dp"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:background="@drawable/input_bg"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:text="@string/a4"
-            android:textColor="@color/colorwhite"
-            android:layout_gravity="center"
-            android:textSize="15sp"
-            android:onClick="man"
-            />
+        <TextView
+            android:id="@+id/text_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello Guys"
+            android:textSize="26dp"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"/>
+
     </LinearLayout>
 
 </LinearLayout>

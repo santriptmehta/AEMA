@@ -20,7 +20,6 @@ import com.google.firebase.firestore.FirebaseFirestore
 class Fragment_plimbing : Fragment() {
     lateinit var recyclerView: RecyclerView
     lateinit var userList: ArrayList<Plumbing>
-    private lateinit var myAdapter: maintainance_adapter
     private lateinit var db: FirebaseFirestore
 
     override fun onCreateView(

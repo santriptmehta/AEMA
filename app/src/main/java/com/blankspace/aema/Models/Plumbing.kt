@@ -7,4 +7,5 @@ data class Plumbing(val id: String = "",
                     val hostel_no : String = "",
                     val location : String = "",
                     val defect : String = "",
+                    val dateTime : String = "",
                     val description : String = "")

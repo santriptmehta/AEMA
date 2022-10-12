@@ -14,6 +14,7 @@ class electrical_adapter(private val userList:ArrayList<Electrical>): RecyclerVi
         val author_name : TextView = itemView.findViewById(R.id.post_author_name)
         val author_defect : TextView = itemView.findViewById(R.id.defect_post_text)
         val author_hoste_no : TextView = itemView.findViewById(R.id.author_hostel_no)
+        val dateTime : TextView = itemView.findViewById(R.id.post_time_date)
 
     }
 
@@ -26,6 +27,7 @@ class electrical_adapter(private val userList:ArrayList<Electrical>): RecyclerVi
         holder.author_name.text = "by ${userList[position].name}"
         holder.author_defect.text = userList[position].defect
         holder.author_hoste_no.text = "Hostel no. ${userList[position].hostel_no}"
+        holder.dateTime.text = userList[position].dateTime
 
     }
 

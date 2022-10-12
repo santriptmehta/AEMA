@@ -5,6 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     app:cardElevation="12dp"
+    android:background="@color/white"
     app:cardCornerRadius="4dp"
     android:layout_margin="8dp">
 
@@ -34,10 +35,10 @@
             tools:text="Author" />
 
         <TextView
-            android:id="@+id/post_time"
+            android:id="@+id/post_time_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="12dp"
+            android:layout_margin="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/defect_post_text"
             tools:text="Time" />

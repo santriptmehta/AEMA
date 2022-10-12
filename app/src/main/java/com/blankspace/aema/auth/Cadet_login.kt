@@ -69,8 +69,7 @@ class cadet_login : AppCompatActivity() {
 
                             var intent = Intent(this, home_page::class.java)
                             startActivity(intent)
-
-
+                            finish()
                             Toast.makeText(this,"successfull",Toast.LENGTH_LONG).show()
                         }else {
                             Toast.makeText(this, "Something went wrong. Please try again.", Toast.LENGTH_LONG).show()

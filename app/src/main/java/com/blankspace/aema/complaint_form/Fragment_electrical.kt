@@ -18,7 +18,6 @@ import com.google.firebase.firestore.FirebaseFirestore
 class Fragment_electrical : Fragment() {
     lateinit var recyclerView: RecyclerView
     lateinit var userList: ArrayList<Electrical>
-    private lateinit var myAdapter: maintainance_adapter
     private lateinit var db: FirebaseFirestore
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

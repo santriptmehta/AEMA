@@ -21,7 +21,6 @@ import com.google.firebase.ktx.Firebase
 class Fragment_maintainance : Fragment() {
     lateinit var recyclerView: RecyclerView
     lateinit var userList: ArrayList<Maintainance>
-    private lateinit var myAdapter: maintainance_adapter
     private lateinit var db: FirebaseFirestore
 
     override fun onCreateView(
