@@ -14,14 +14,15 @@ import com.blankspace.aema.R
 import com.blankspace.aema.adapters.electrical_adapter
 import com.blankspace.aema.adapters.maintainance_adapter
 import com.blankspace.aema.adapters.plumbing_adapter
+import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.google.firebase.firestore.FirebaseFirestore
 
 
 class Fragment_plimbing : Fragment() {
     lateinit var recyclerView: RecyclerView
-    lateinit var userList: ArrayList<Plumbing>
-    private lateinit var myAdapter: maintainance_adapter
-    private lateinit var db: FirebaseFirestore
+//    lateinit var userList: ArrayList<Plumbing>
+//    private lateinit var db: FirebaseFirestore
+    private lateinit var adapter : plumbing_adapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,25 +35,51 @@ class Fragment_plimbing : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val layoutManager = LinearLayoutManager(context)
+//        val layoutManager = LinearLayoutManager(context)
+//        recyclerView = view.findViewById(R.id.recycler_view_plumbing)
+//        recyclerView.layoutManager = layoutManager
+//        userList = arrayListOf()
+//        db = FirebaseFirestore.getInstance()
+//        db.collection("Plumbing").get()
+//            .addOnSuccessListener {
+//                if(!it.isEmpty){
+//                    for(data in it.documents){
+//                        val userElc :  Plumbing? = data.toObject(Plumbing::class.java)
+//                        if(userElc!=null){
+//                            userList.add(userElc)
+//                        }
+//                    }
+//                    recyclerView.adapter = plumbing_adapter(userList)
+//                }
+//            }
+//            .addOnFailureListener{
+//                Toast.makeText(activity,it.toString(), Toast.LENGTH_LONG).show()
+//            }
         recyclerView = view.findViewById(R.id.recycler_view_plumbing)
-        recyclerView.layoutManager = layoutManager
-        userList = arrayListOf()
-        db = FirebaseFirestore.getInstance()
-        db.collection("Plumbing").get()
-            .addOnSuccessListener {
-                if(!it.isEmpty){
-                    for(data in it.documents){
-                        val userElc :  Plumbing? = data.toObject(Plumbing::class.java)
-                        if(userElc!=null){
-                            userList.add(userElc)
-                        }
-                    }
-                    recyclerView.adapter = plumbing_adapter(userList)
-                }
-            }
-            .addOnFailureListener{
-                Toast.makeText(activity,it.toString(), Toast.LENGTH_LONG).show()
-            }
+        setUpRecyclerView()
+    }
+
+    private fun setUpRecyclerView(){
+        val firestore = FirebaseFirestore.getInstance()
+        val query = firestore.collection("Plumbing")
+        val recyclerViewOptions = FirestoreRecyclerOptions.Builder<Plumbing>().setQuery(query,Plumbing::class.java).build()
+
+        context?.let {
+            adapter = plumbing_adapter(recyclerViewOptions,it)
+        }
+        if (this::adapter.isInitialized){
+            recyclerView.adapter = adapter
+        }
+        recyclerView.layoutManager = LinearLayoutManager(activity)
+    }
+
+    override fun onStart() {
+        super.onStart()
+        adapter.startListening()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        adapter.stopListening()
     }
 }

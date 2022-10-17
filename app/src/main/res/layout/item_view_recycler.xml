@@ -5,12 +5,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     app:cardElevation="12dp"
+    android:background="@color/white"
     app:cardCornerRadius="4dp"
     android:layout_margin="8dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/white"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/defect_post_text"
@@ -29,15 +31,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="12dp"
+            android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/defect_post_text"
             tools:text="Author" />
 
         <TextView
-            android:id="@+id/post_time"
+            android:id="@+id/post_time_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="12dp"
+            android:layout_margin="20dp"
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/defect_post_text"
             tools:text="Time" />
@@ -50,10 +54,21 @@
             android:textSize="16sp"
             android:layout_marginStart="10dp"
             android:text="0"
+            android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/post_author_name"
             app:layout_constraintBottom_toBottomOf="parent"
             tools:text="100" />
+        <ImageView
+            android:id="@+id/process_status_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toBottomOf="@+id/post_time_date"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/processing_icon"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

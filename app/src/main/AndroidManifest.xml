@@ -4,6 +4,7 @@
     package="com.blankspace.aema">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 
     <application
         android:allowBackup="true"
@@ -15,6 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AEMA"
         tools:targetApi="31">
+
 
         <activity
             android:name=".descriptive_issue"
@@ -29,16 +31,7 @@
             android:name=".home_page"
             android:exported="false" />
         <activity
-            android:name=".sulogin"
-            android:exported="false" />
-        <activity
-            android:name=".teamlogin"
-            android:exported="false" />
-        <activity
             android:name=".auth.cadet_login"
-            android:exported="false" />
-        <activity
-            android:name=".option"
             android:exported="false" />
         <activity
             android:name=".form.maintenance_form"

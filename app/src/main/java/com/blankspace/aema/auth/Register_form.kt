@@ -8,6 +8,7 @@ import android.util.Log
 import android.util.Patterns
 import android.view.View
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
@@ -25,21 +26,20 @@ class register_form : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register_form)
-        val emailText: TextInputLayout = findViewById(R.id.email_text)
-        val nameText: TextInputLayout = findViewById(R.id.name_text)
-        val passwordText: TextInputLayout = findViewById(R.id.password_text)
-        val confirmPasswordText: TextInputLayout = findViewById(R.id.confirm_password_text)
+        val emailText: EditText = findViewById(R.id.email_text)
+        val nameText: EditText = findViewById(R.id.name_text)
+        val passwordText: EditText = findViewById(R.id.password_text)
+        val confirmPasswordText: EditText = findViewById(R.id.confirm_password_text)
         val registerButton: Button = findViewById(R.id.register_button)
-        val registerProgress: ProgressBar = findViewById(R.id.register_progress)
         val loginPage : TextView = findViewById(R.id.go_to_login)
 
 
 
         registerButton.setOnClickListener {
-            val email = emailText.editText?.text.toString()
-            val name = nameText.editText?.text.toString()
-            val password = passwordText.editText?.text.toString()
-            val confirmPassword = confirmPasswordText.editText?.text.toString()
+            val email = emailText.text.toString()
+            val name = nameText.text.toString()
+            val password = passwordText.text.toString()
+            val confirmPassword = confirmPasswordText.text.toString()
 
             emailText.error = null
             nameText.error = null
@@ -69,7 +69,6 @@ class register_form : AppCompatActivity() {
                 emailText.error = "Please enter a valid email address"
                 return@setOnClickListener
             }
-            registerProgress.visibility = View.VISIBLE
 
             val auth = FirebaseAuth.getInstance()
             auth.createUserWithEmailAndPassword(email, password)
@@ -79,7 +78,6 @@ class register_form : AppCompatActivity() {
                         val firestore = FirebaseFirestore.getInstance().collection("Users")
                         firestore.document(auth.currentUser?.uid!!).set(user)
                             .addOnCompleteListener { task2 ->
-                                registerProgress.visibility = View.GONE
                                 if (task2.isSuccessful) {
                                     Toast.makeText(this,"Successfully Account Created.", Toast.LENGTH_LONG).show()
 
@@ -89,7 +87,6 @@ class register_form : AppCompatActivity() {
                                 }
                             }
                     } else {
-                        registerProgress.visibility = View.GONE
                         Toast.makeText(this, "Something went wrong. Please try again.", Toast.LENGTH_LONG).show()
                         Log.d(TAG, task.exception.toString())
                     }
