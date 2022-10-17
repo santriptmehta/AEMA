@@ -1,4 +1,4 @@
-package com.blankspace.aema
+package com.blankspace.aema.notification
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -11,6 +11,8 @@ import android.graphics.Color
 import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
+import com.blankspace.aema.MainActivity
+import com.blankspace.aema.R
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 import kotlin.random.Random

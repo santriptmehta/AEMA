@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import com.blankspace.aema.auth.cadet_login
+import com.blankspace.aema.notification.checkNotificationActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase

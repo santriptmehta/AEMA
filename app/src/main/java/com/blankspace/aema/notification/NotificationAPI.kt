@@ -1,7 +1,7 @@
-package com.blankspace.aema
+package com.blankspace.aema.notification
 
-import com.blankspace.aema.Constants.Companion.CONTENT_TYPE
-import com.blankspace.aema.Constants.Companion.SERVER_KEY
+import com.blankspace.aema.notification.Constants.Companion.CONTENT_TYPE
+import com.blankspace.aema.notification.Constants.Companion.SERVER_KEY
 import okhttp3.ResponseBody
 import retrofit2.Response
 import retrofit2.http.Body

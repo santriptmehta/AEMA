@@ -16,23 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AEMA"
         tools:targetApi="31">
-        <activity
-            android:name=".checkNotificationActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
 
-        <service
-            android:name=".FirebaseService"
-            android:exported="true"
-            android:permission="com.google.android.c2dm.permission.SEND">
-            <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-            </intent-filter>
-        </service>
 
         <activity
             android:name=".descriptive_issue"

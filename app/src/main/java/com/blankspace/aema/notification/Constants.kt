@@ -1,4 +1,4 @@
-package com.blankspace.aema
+package com.blankspace.aema.notification
 
 class Constants {
 

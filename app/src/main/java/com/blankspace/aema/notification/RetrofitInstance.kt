@@ -1,6 +1,6 @@
-package com.blankspace.aema
+package com.blankspace.aema.notification
 
-import com.blankspace.aema.Constants.Companion.BASE_URL
+import com.blankspace.aema.notification.Constants.Companion.BASE_URL
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

@@ -1,10 +1,14 @@
-package com.blankspace.aema
+package com.blankspace.aema.notification
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import com.blankspace.aema.R
+import com.blankspace.aema.notification.NotificationData
+import com.blankspace.aema.notification.PushNotification
+import com.blankspace.aema.notification.RetrofitInstance
 import com.google.firebase.messaging.FirebaseMessaging
 import com.google.gson.Gson
 import kotlinx.coroutines.CoroutineScope

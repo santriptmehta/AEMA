@@ -1,4 +1,4 @@
-package com.blankspace.aema
+package com.blankspace.aema.notification
 
 data class NotificationData (
     val title : String,
