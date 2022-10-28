@@ -16,41 +16,54 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AEMA"
         tools:targetApi="31">
+        <service android:name=".notification.FirebaseService"
+            android:permission="com.google.android.c2dm.permission.SEND"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
 
-
+        </service>
+        <activity
+            android:name=".pastRegistrationActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".AppMainActivityBeta"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.complaint_form_beta"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".descriptive_issue"
             android:exported="false" />
-        <activity
-            android:name=".complaint_form.complaint_view"
-            android:exported="false" />
-        <activity
-            android:name=".auth.register_form"
-            android:exported="false" />
-        <activity
-            android:name=".home_page"
-            android:exported="false" />
+
         <activity
             android:name=".auth.cadet_login"
-            android:exported="false" />
-        <activity
-            android:name=".form.maintenance_form"
-            android:exported="false" />
-        <activity
-            android:name=".form.plumbing_form"
-            android:exported="false" />
-        <activity
-            android:name=".form.electrician_form"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".auth.register_form"
+            android:exported="false">
+        </activity>
+
     </application>
 
 </manifest>

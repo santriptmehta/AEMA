@@ -6,8 +6,7 @@
     <solid android:color="@color/purple_200"></solid>
     <gradient
         android:startColor = "#330864"
-        android:centerColor = "#055798"
-        android:endColor = "#2FC4CA"
+        android:endColor = "#055798"
         android:angle = "270"
         android:type="linear" />
 </shape>

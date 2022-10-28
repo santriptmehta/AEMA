@@ -10,9 +10,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
-import androidx.core.view.isVisible
+import com.blankspace.aema.AppMainActivityBeta
 import com.blankspace.aema.R
-import com.blankspace.aema.home_page
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -33,14 +32,17 @@ class cadet_login : AppCompatActivity() {
         cadet_passward = findViewById(R.id.cadet_passward)
         cadet_login_button = findViewById(R.id.cadet_loginbt)
         auth = Firebase.auth
-        progressBar = findViewById(R.id.progress_bar_login)
+        progressBar = findViewById(R.id.progress_bar)
 
         if(auth.currentUser != null){
-            var intent = Intent(this, home_page::class.java)
+            progressBar.visibility = View.VISIBLE
+            var intent = Intent(this, AppMainActivityBeta::class.java)
             startActivity(intent)
+            progressBar.visibility = View.VISIBLE
             finish()
         }else{
             cadet_login_button.setOnClickListener {
+                progressBar.visibility = View.VISIBLE
 
                 val email = cadet_login_username.text.toString()
                 val password = cadet_passward.text.toString()
@@ -66,8 +68,8 @@ class cadet_login : AppCompatActivity() {
                     .addOnCompleteListener{task ->
 
                         if(task.isSuccessful){
-
-                            var intent = Intent(this, home_page::class.java)
+                            var intent = Intent(this, AppMainActivityBeta::class.java)
+                            progressBar.visibility = View.GONE
                             startActivity(intent)
                             finish()
                             Toast.makeText(this,"successfull",Toast.LENGTH_LONG).show()

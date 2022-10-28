@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_gradiant"
+    tools:context=".fragment.detailComplaintView"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/NoChangetype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Type"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/dateTime"
+        android:layout_width="135dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/white"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        android:layout_marginStart="200dp"
+        android:layout_toEndOf="@+id/NoChangetype"
+        android:text="dateTime" />
+    <TextView
+        android:id="@+id/changeType"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:text="title will appear here"
+        android:textColor="@color/white"
+        android:layout_alignTop="@+id/NoChangetype"
+        android:layout_marginTop="30dp"
+        android:textSize="20dp"
+        android:layout_marginStart="20dp"/>
+    <TextView
+        android:id="@+id/NoChangeHostel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/changeType"
+        android:text="Hostel No. :- "
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:id="@+id/changeHostel"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/NoChangeHostel"
+        android:layout_alignLeft="@+id/NoChangeHostel"
+        android:layout_alignTop="@+id/NoChangeHostel"
+        android:layout_alignEnd="@+id/NoChangeHostel"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="-59dp"
+        android:text="16PS Kailash"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/NoChangeRoll"
+        android:layout_width="77dp"
+        android:layout_height="18dp"
+        android:layout_alignTop="@+id/changeType"
+        android:layout_alignEnd="@+id/changeRoll"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="-19dp"
+        android:layout_toEndOf="@+id/NoChangeHostel"
+        android:text="Roll No. :- "
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/changeRoll"
+        android:layout_width="54dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/NoChangeRoll"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="43dp"
+        android:layout_toEndOf="@+id/changeHostel"
+        android:text="23234"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/NochangeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/changeHostel"
+        android:text="Title :- "
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:id="@+id/changeTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:text="Some body is under it"
+        android:layout_alignLeft="@+id/NochangeTitle"
+        android:layout_alignStart="@+id/NochangeTitle"
+        android:layout_alignTop="@+id/NochangeTitle"
+        android:layout_marginTop="30dp"/>
+
+
+    <TextView
+        android:id="@+id/NochangeLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/changeTitle"
+        android:text="Location :- "
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:id="@+id/changeLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:text="Some body is under it"
+        android:layout_alignLeft="@+id/NochangeLocation"
+        android:layout_alignStart="@+id/NochangeLocation"
+        android:layout_alignTop="@+id/NochangeLocation"
+        android:layout_marginTop="30dp"/>
+
+
+
+    <TextView
+        android:id="@+id/NochangeDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/changeLocation"
+        android:text="Description :- "
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:id="@+id/changeDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:text="Description will appear here"
+        android:layout_alignLeft="@+id/NochangeDescription"
+        android:layout_alignStart="@+id/NochangeDescription"
+        android:layout_alignTop="@+id/NochangeDescription"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/NochangeStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/changeDescription"
+        android:text="Status :- "
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"/>
+
+    <ImageView
+        android:id="@+id/statusImg"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/NochangeStatus"
+        android:src="@drawable/processing_icon"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/changeStatusReview"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_alignLeft="@+id/statusImg"
+        android:layout_alignTop="@+id/statusImg"
+        android:layout_alignBottom="@+id/statusImg"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="111dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="-8dp"
+        android:layout_toEndOf="@+id/statusImg"
+        android:text="Still Processing"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+
+        <TextView
+        android:id="@+id/NochangeFeedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/statusImg"
+        android:text="Feedback From Admin :- "
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:id="@+id/changeFeedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/NochangeFeedback"
+        android:layout_alignLeft="@+id/NochangeFeedback"
+        android:layout_alignTop="@+id/NochangeFeedback"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Not yet reviewed yet, wait till"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+
+
+
+
+
+
+</RelativeLayout>

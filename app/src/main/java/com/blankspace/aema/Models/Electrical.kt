@@ -1,13 +1,14 @@
-package com.blankspace.aema.Models
+package com.blankspace.aemaadmin.model
 
-class Electrical(val id: String = "",
-                 val name: String = "",
-                 val email: String = "",
-                 val roll_no: String = "",
-                 val hostel_no : String = "",
-                 val location : String = "",
-                 val dateTime : String = "",
+class Electrical(val id_issue: String = "",
+                 val name : String = "",
+                 val userRollno : String = "",
+                 val userEmail : String = "",
+                 val userHostelno : String = "",
+                 val issueLocation : String = "",
+                 val issueDefect : String = "",
+                 val issueDescribe : String = "",
+                 val issueDataTime : String = "",
                  val admin_review_data : String = "",
-                 val admin_resolved_checkbox : Boolean = false,
-                 val defect : String = "",
-                 val description : String = "")
+                 val issueType : String = "",
+                 val admin_resolved_checkbox : Boolean = false)
